@@ -9,6 +9,7 @@ const path = require('path');
 const auth_protected = (req, res) => {
 
     const filePath = path.join(__dirname, '../public', 'login.html');
+    console.log("soldier chuj")
     res.sendFile(filePath);
 }
 const auth_callback = (req, res) => {
