@@ -42,6 +42,8 @@ const findTeacher = async (req, res,result) => {
             console.log(body)
             const data = JSON.parse(body);
             
+            console.log(data)
+
             res.render('index', { events: data });
         }
     )
