@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalendarz</title>
+</head>
+<body>
+  <h1>Kalendarz wydarzeń</h1>
+  <ul>
+    <% events.forEach(function(event) { %>
+      <li>
+        <h2><%= event.name.pl %></h2>
+        <p>Start: <%= event.start_time %></p>
+        <p>Koniec: <%= event.end_time %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

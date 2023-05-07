@@ -1,2 +1,1 @@
-# prowadzacy
-strona do wyszukiwania wprwadzacych
+znajdz prowadzacego by debile
