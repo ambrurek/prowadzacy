@@ -50,10 +50,10 @@ app.get('/', (req, res) => {
 app.use('/auth',authRoutes);
 app.use('/teacher',teacherRoutes);
 
-app.get('/protected/setup',isLoggedIn,(req,res)=>{
+app.get('/set/setup',isLoggedIn,(req,res)=>{
   data = require('./teachers.json');
   Teacher.insertMany(data)
-  res.redirect('/protected')
+  res.redirect('/')
 })
 
 
