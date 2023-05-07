@@ -2,7 +2,7 @@ const request = require('request');
 const OAuth = require('oauth-1.0a');
 const crypto = require('crypto')
 
-const consumer_key = 'Y8weKuCTCRwsmhQ4DDB';
+const consumer_key = 'Y8weKuCTCRwsmhQ4DDBL';
 const consumer_secret = '2UD4rhHB9cTCLrRHs8xXcEVbeHhDbTAfbh8F8Wtz';
 const token = {
 key: '89Df73qP6YAyQ49vBbpc',
@@ -22,15 +22,15 @@ function makeRequest(url, method, callback) {
         url: url,
         method: method
     };
-    const signed_form = oauth.authorize(request_data);
+    const signed_form = oauth.authorize(request_data,token);
     request(
         {
             url: url,
             method: method,
-            form: signed_form
+            headers: oauth.toHeader(oauth.authorize(request_data, token)),
         },
         function(error, response, body) {
-            if (error) {
+            if (error) {+
                 callback(error, null);
             } else {
                 try {
