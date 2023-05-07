@@ -8,7 +8,7 @@ const teacherRoutes = require('./routes/teacherRoutes')
 
 
 
-require('./auth');
+require('./auth/auth');
 
 const app = express();
 

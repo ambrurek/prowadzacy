@@ -1,7 +1,7 @@
 const passport = require('passport');
 
 
-require('../auth.js');
+require('../auth/auth.js');
 const path = require('path');
 
 
