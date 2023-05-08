@@ -7,6 +7,8 @@ const router = express.Router();
 
 
 router.get('/byname',roomController.findRoom);
+router.get('/all',roomController.All);
+
 
 
 module.exports = router;

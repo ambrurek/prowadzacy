@@ -2,10 +2,19 @@
 <html>
   <head>
     <title>Strona główna</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
   </head>
   <body>
-    <h1>Witaj na stronie głównej</h1>
-    <a href="/auth/google">Zaloguj się przez konto Google</a>
+    <header>
+      <h1>Znajdź prowadzącego</h1>
+      <a class="login-btn" href="/auth/google">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_68x28dp.png" alt="Google icon">
+        Zaloguj się przez konto Google
+      </a>
+    </header>
+    <div class="search-container">
+      <input type="text" placeholder="Wyszukaj prowadzącego...">
+      <button>Szukaj</button>
+    </div>
   </body>
 </html>
