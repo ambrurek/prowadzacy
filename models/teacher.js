@@ -13,6 +13,11 @@ const teacherSchema = new mongoose.Schema({
   last_name: {
     type: String,
     required: true
+  },
+  massage:
+  {
+    type: String,
+    required: false
   }
 });
 

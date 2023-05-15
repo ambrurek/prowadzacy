@@ -5,6 +5,8 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes')
 const teacherRoutes = require('./routes/teacherRoutes')
+const roomRoutes = require('./routes/roomRoutes')
+
 
 
 
@@ -32,6 +34,8 @@ app.use((req, res, next) => {
 });
 
 const Teacher = require('./models/teacher');
+const Room = require('./models/room');
+
 
 function isLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
@@ -49,12 +53,21 @@ app.get('/', (req, res) => {
 
 app.use('/auth',authRoutes);
 app.use('/teacher',teacherRoutes);
+app.use('/room',roomRoutes);
+
 
 app.get('/set/setup',isLoggedIn,(req,res)=>{
   data = require('./teachers.json');
   Teacher.insertMany(data)
   res.redirect('/')
 })
+
+app.get('/set/setup2',isLoggedIn,(req,res)=>{
+  data = require('./rooms.json');
+  Room.insertMany(data)
+  res.redirect('/')
+})
+
 
 
 

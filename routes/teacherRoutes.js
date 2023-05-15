@@ -6,7 +6,9 @@ const router = express.Router();
 
 
 
-router.get('/bynames',ensure.ensureAuthenticated, teacherController.findTeacher);
+router.get('/bynames',teacherController.findTeacher);
+router.get('/all',teacherController.teacherAll);
+
 
 
 module.exports = router;
