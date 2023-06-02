@@ -32,7 +32,8 @@ const teacherAll = async (req,res,result) =>
   {
     const filter = {};
     const all = await Teacher.find(filter);
-    res.send(all)
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3001'); // Dodaj tę linię
+    res.json(all)
   };
 
 module.exports = { 

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Event = require('./event')
 const Schema = mongoose.Schema;
 
 const roomSchema = new mongoose.Schema({
@@ -13,7 +14,12 @@ const roomSchema = new mongoose.Schema({
   room_number: {
     type: String,
     required: true
-  }
+  },
+  Events: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Event',
+    required: false
+  }],
 });
 
 const Room = mongoose.model('Room', roomSchema);

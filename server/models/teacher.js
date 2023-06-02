@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Event = require('./event')
 
 const teacherSchema = new mongoose.Schema({
   id: {
@@ -18,7 +19,12 @@ const teacherSchema = new mongoose.Schema({
   {
     type: String,
     required: false
-  }
+  },
+  Event: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Event',
+    required: false
+  }],
 });
 
 const Teacher = mongoose.model('Teacher', teacherSchema);

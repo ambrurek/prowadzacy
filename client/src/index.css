@@ -1,0 +1,86 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #59A5FF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  img {
+    height: 60px;
+    display: block;
+  margin: auto;
+  }
+  
+  a.login-btn:hover {
+    background-color: #ccc;
+    color: #1e90ff;
+    border: none;
+  }
+  .LeftSlider {
+    position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: darkred;
+  }
+  .navbar h1{
+    color: #fff;
+    margin: 10px;
+  }
+  .navbar h2{
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+ .LeftSlider .Marked{
+    color:white;
+    background-color: darkred;
+
+  }
+  .Home h2{
+    color: #fff;
+    text-align: center;
+  }
+  .Planowanie h2{
+    color: #fff;
+    text-align: center;
+  }
+  .Planowanie2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .logo {
+    display: block;
+    margin: auto;
+  }
+  
+  .google-login-button {
+    background-color: #db4437;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .google-login-button:hover {
+    background-color: #c53929;
+  }
