@@ -10,6 +10,8 @@ router.get('/protected',ensure.ensureAuthenticated, authController.auth_protecte
 router.get('/google', authController.auth_google);
 router.get('/google/callback', authController.auth_callback);
 router.get('/logout', authController.auth_logout);
+router.get('/success', authController.auth_success);
+
 router.delete('/auth/google/failure', authController.auth_failure);
 
 module.exports = router;

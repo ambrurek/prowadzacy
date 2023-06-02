@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const consultationSchema = new mongoose.Schema({
-  name: {
+const EventSchema = new mongoose.Schema({
+  title: {
     type: String,
-    required: true
-  },
-  teacherId: {
-    type: Number,
     required: true
   },
   start_time: {
@@ -18,12 +14,13 @@ const consultationSchema = new mongoose.Schema({
     type: Date,
     required: true
   },
-  room_id: {
-    type: Number,
+  id:{
+    type: String,
     required: true
   }
+
 });
 
-const Consultation = mongoose.model('Consultation', consultationSchema);
+const Event = mongoose.model('Event', EventSchema);
 
-module.exports = Consultation
+module.exports = Event

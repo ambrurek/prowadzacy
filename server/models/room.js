@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Consultation = require('./consultation')
+const Event = require('./event')
 const Schema = mongoose.Schema;
 
 const roomSchema = new mongoose.Schema({
@@ -15,9 +15,9 @@ const roomSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  consultations: [{
+  Events: [{
     type: Schema.Types.ObjectId,
-    ref: 'Consultation',
+    ref: 'Event',
     required: false
   }],
 });

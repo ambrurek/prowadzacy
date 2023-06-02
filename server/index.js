@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes')
 const teacherRoutes = require('./routes/teacherRoutes')
 const roomRoutes = require('./routes/roomRoutes')
+const eventRoutes = require('./routes/eventRoutes')
+const cors = require('cors');
 
 
 
@@ -13,6 +15,8 @@ const roomRoutes = require('./routes/roomRoutes')
 require('./auth/auth');
 
 const app = express();
+app.use(cors());
+app.use(express.json())
 
 const dbURI = "mongodb://localhost:8001";
 
@@ -54,6 +58,7 @@ app.get('/', (req, res) => {
 app.use('/auth',authRoutes);
 app.use('/teacher',teacherRoutes);
 app.use('/room',roomRoutes);
+app.use('/event',eventRoutes);
 
 
 app.get('/set/setup',isLoggedIn,(req,res)=>{
