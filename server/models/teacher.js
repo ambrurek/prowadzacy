@@ -15,11 +15,6 @@ const teacherSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  massage:
-  {
-    type: String,
-    required: false
-  },
   Event: [{
     type: Schema.Types.ObjectId,
     ref: 'Event',

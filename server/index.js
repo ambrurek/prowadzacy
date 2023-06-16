@@ -61,16 +61,14 @@ app.use('/room',roomRoutes);
 app.use('/event',eventRoutes);
 
 
-app.get('/set/setup',isLoggedIn,(req,res)=>{
+app.get('/set/setup',(req,res)=>{
   data = require('./teachers.json');
   Teacher.insertMany(data)
-  res.redirect('/')
 })
 
-app.get('/set/setup2',isLoggedIn,(req,res)=>{
+app.get('/set/setup2',(req,res)=>{
   data = require('./rooms.json');
   Room.insertMany(data)
-  res.redirect('/')
 })
 
 
