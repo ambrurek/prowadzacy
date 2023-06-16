@@ -12,12 +12,12 @@ router.get('/events/:idteacher', eventController.getAllEventsForTeacher);
 router.get('/event', eventController.getEventForTeacher);
 
 //Utwórz nowe wydarzenie dla konkretnego nauczyciela
-router.post('/event', eventController.createEventForTeacher);
+router.post('/event',ensure.ensureAuthenticated, eventController.createEventForTeacher);
 
 //Zaktualizuj istniejące wydarzenie dla konkretnego nauczyciela
-router.put('/event', eventController.updateEventForTeacher);
+router.put('/event', ensure.ensureAuthenticated,eventController.updateEventForTeacher);
 
 //Usuń wydarzenie dla konkretnego nauczyciela
-router.delete('/event', eventController.deleteEventForTeacher);
+router.delete('/event',ensure.ensureAuthenticated, eventController.deleteEventForTeacher);
 
 module.exports = router;

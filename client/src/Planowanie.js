@@ -27,9 +27,10 @@ const Planowanie = () => {
           // Wykonaj zapytanie do teachers/byId, aby uzyskać ID na podstawie imienia i nazwiska
           const firstName = data.user.given_name
           const lastName = data.user.family_name
+
           const teacherUrl = `${API_URL}/teacher/byId?firstName=${firstName}&lastName=${lastName}`;
           const response = await axios.get(teacherUrl);
-
+          const { id } = response.data;
           setTeacherId(id);
         }
       } catch (err) {
