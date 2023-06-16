@@ -45,7 +45,7 @@ const Kalendarz2 = () => {
           ),
         ]);
         const formattedEvents = eventsResponse.events.map((event) => ({
-          id: event.id,
+          id: createEventId(),
           title: event.name.pl,
           start: event.start_time,
           end: event.end_time,
