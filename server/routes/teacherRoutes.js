@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.get('/bynames',teacherController.findTeacher);
 router.get('/all',teacherController.teacherAll);
+router.get('/byId',teacherController.getTeacherIdByName);
+
 
 
 

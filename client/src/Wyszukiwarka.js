@@ -12,9 +12,6 @@ const Planowanie    = () => {
           <Navbar />
           <Link to = "/Kalendarz"><h2 className="Marked">Kalendarz</h2></Link>
           <Link to = "/Wyszukiwarka"><h2>Wyszukiwarka</h2></Link>
-          <Link to = "/Planowanie"><h2>Planowanie</h2></Link>
-          <Link to = "/Ustawienia"><h2>Ustawienia</h2></Link>
-          <h2>Wyloguj</h2>
         </div>
         <div className='Planowanie2'>
         <SearchBar/>

@@ -5,8 +5,8 @@ import Home from './Home';
 import Planowanie from './Planowanie';
 import Ustawienia from './Ustawienia';
 import Kalendarz from './Kalendarz';
-import Kalendarz2 from './Kalendarz2'
 import Wyszukiwarka from './Wyszukiwarka';
+import Kalendarz2 from './Sale';
 function App() {
 
  
@@ -23,14 +23,14 @@ function App() {
              <Route path="/Kalendarz/:idteacher" component={Kalendarz}>
                <Kalendarz />
              </Route>
-             <Route path="/kalendarz2/:idteacher" component={Kalendarz2}>
-               <Kalendarz2 />
-             </Route>
              <Route path="/Wyszukiwarka">
                <Wyszukiwarka />
              </Route>
              <Route path="/Planowanie">
                <Planowanie />
+             </Route>
+             <Route path="/Sale/:roomid">
+               <Kalendarz2 />
              </Route>
              <Route path="/Ustawienia">
                <Ustawienia />

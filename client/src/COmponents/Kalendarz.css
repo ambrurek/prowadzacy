@@ -33,3 +33,30 @@ b { /* used for event dates/times */
   max-width: 1100px;
   margin: 0 auto;
 }
+
+.fc-event {
+  overflow: hidden;
+}
+.fc-timeline-event {
+  overflow: hidden;
+}
+.fc-event {
+  background-color: maroon;
+  color: white;
+}
+
+.fc-day-grid-event {
+  background-color: maroon;
+  color: white;
+}
+
+.fc-time-grid-event {
+  background-color: maroon;
+  color: white;
+}
+
+.fc-list-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

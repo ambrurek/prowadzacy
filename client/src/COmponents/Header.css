@@ -6,7 +6,9 @@
   justify-content: space-between;
   padding: 10px;
   background-color: #b71c1c; /* Kolor bordowy */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Dodanie cienia */
 }
+
 
 .logo {
   flex: 1;

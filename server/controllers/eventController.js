@@ -1,14 +1,12 @@
 const Event = require('../models/event');
 const Teacher = require('../models/teacher');
 
-// Get all events for a specific teacher
+// zwraca wszystkie wydarzania ktora sa w db dla prowadzacego
 const getAllEventsForTeacher = async (req, res) => {
   const teacherId = req.params.idteacher;
-  console.log(teacherId)
   try {
     const teacher = await Teacher.findOne({ id: teacherId }).populate('Event');
     if (teacher) {
-        console.log(teacher.Event)
       res.json(teacher.Event);
     } else {
       res.status(404).json({ message: 'Teacher not found' });
@@ -18,7 +16,7 @@ const getAllEventsForTeacher = async (req, res) => {
   }
 };
 
-// Get a specific event for a specific teacher
+// zwraca konkretne wydarzenie, dla konkrenego prowadzacego
 const getEventForTeacher = async (req, res) => {
   const teacherId = req.params.teacherId;
   const eventId = req.params.eventId;
@@ -39,9 +37,8 @@ const getEventForTeacher = async (req, res) => {
   }
 };
 
-// Create a new event for a specific teacher
+
 const createEventForTeacher = async (req, res) => {
-    console.log(req.body)
   const { teacherId,title, start_time, end_time, id } = req.body;
   try {
     const teacher = await Teacher.findOne({ id: teacherId });
@@ -58,17 +55,14 @@ const createEventForTeacher = async (req, res) => {
   }
 };
 
-// Update an existing event for a specific teacher
+
 const updateEventForTeacher = async (req, res) => {
   const { title, start_time, end_time, eventId,teacherId} = req.body;
-  console.log(req.body)
   try {
     const teacher = await Teacher.findOne({ id: teacherId }).populate('Event');
     if (teacher) {
-        console.log('hmm')
       const event = teacher.Event.find((event) => event._id.toString() === eventId);
       if (event) {
-        console.log('hmm2')
         event.title = title;
         event.start_time = start_time;
         event.end_time = end_time;
@@ -81,14 +75,12 @@ const updateEventForTeacher = async (req, res) => {
       res.status(404).json({ message: 'Teacher not found' });
     }
   } catch (err) {
-    console.log(err)
     res.status(400).json({ message: err.message });
   }
 };
 
 const deleteEventForTeacher = async (req, res) => {
     const { teacherId,eventId} = req.body;
-    console.log(req.body)
     try {
       const teacher = await Teacher.findOne({ id: teacherId }).populate('Event');
       if (teacher) {

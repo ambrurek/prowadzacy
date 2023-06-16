@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import logo from './Logo.png';
-import Kalendarz from './COmponents/kalendarz2';
+import Kalendarz2 from './COmponents/kalendarz2';
 import { Link } from 'react-router-dom';
 import Header from './COmponents/Header';
 const Planowanie    = () => {
@@ -9,15 +9,12 @@ const Planowanie    = () => {
           <Header> <Link to='/' className = 'logo'><img src={logo} alt="Logo"/></Link></Header>
           <div className='LeftSlider'>
           <Navbar />
-          <Link to = "/Kalendarz2"><h2 className="Marked">Kalendarz</h2></Link>
           <Link to = "/Wyszukiwarka"><h2>Wyszukiwarka</h2></Link>
           <Link to = "/Planowanie"><h2>Planowanie</h2></Link>
-          <Link to = "/Ustawienia"><h2>Ustawienia</h2></Link>
-          <h2>Wyloguj</h2>
         </div>
     <div className='Planowanie2'>
     </div>
-            <Kalendarz/>
+            <Kalendarz2/>
       </div>
       
      );

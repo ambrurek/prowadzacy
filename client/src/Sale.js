@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import logo from './Logo.png';
-import Kalendarz from './COmponents/Kalendarz';
+import Kalendarz2 from './COmponents/Sale';
 import { Link } from 'react-router-dom';
 import Header from './COmponents/Header';
 
@@ -23,7 +23,7 @@ const Planowanie    = () => {
         </Link>
       </div>
       <div className="Planowanie2">
-        <Kalendarz />
+        <Kalendarz2 />
       </div>
     </div>
   );

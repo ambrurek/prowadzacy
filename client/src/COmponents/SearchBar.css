@@ -1,24 +1,43 @@
-.searchDiv{
+.searchDiv {
   width: 600px;
   margin-top: 250px;
   display: flex;
   flex-direction: column;
   height: 400px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dodaj cień */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.searchInput{
+.searchButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.searchButtons button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.searchButtons button.active {
+  font-weight: bold;
+}
+
+.searchInput {
   background-color: white;
   width: 100%;
   height: 60px;
   display: flex;
   border: solid;
   border-radius: 10px;
-  border-width:1px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dodaj cień */
+  border-width: 1px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.searchBar{
+.searchBar {
   flex: 1;
   font-size: 20px;
   padding: 0px;
@@ -29,7 +48,7 @@
   outline: none;
 }
 
-.dataResults{
+.dataResults {
   width: 100%;
   height: 200px;
   background-color: white;
@@ -37,14 +56,14 @@
   border-radius: 15px;
   overflow: hidden;
   overflow-y: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.dataResults::-webkit-scrollbar{
+.dataResults::-webkit-scrollbar {
   display: none;
-
 }
 
-.nauczycielDiv{
+.resultDiv {
   height: 40px;
   border: solid;
   border-color: darkred;
@@ -56,8 +75,7 @@
   color: black;
 }
 
-.nauczycielDiv:hover{
+.resultDiv:hover {
   background-color: darkred;
   color: white;
 }
-
